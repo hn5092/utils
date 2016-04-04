@@ -1,0 +1,13 @@
+package tutorial;
+option java_package = "com.x.protocolbuffer";
+option java_outer_classname = "TestPeople";
+message People {
+	required string name = 1;
+	required int32 id = 2;
+	optional string email = 3;
+	message PhoneNumber {
+	required string number = 1;
+	optional int32 type = 2; 
+	}
+	repeated PhoneNumber phone = 4;
+}
