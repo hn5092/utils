@@ -1,12 +1,9 @@
 package hadoop.thread.more;
 
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.LockSupport;
-
-import org.glassfish.grizzly.impl.UnsafeFutureImpl;
 import org.junit.Test;
 
-import sun.misc.Unsafe;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.LockSupport;
 
 public class 手动阻塞线程 {
 	
