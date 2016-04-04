@@ -14,12 +14,13 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 .jar
+.idea
 .checkstyle
 # Windows shortcuts
 *.lnk
 .classpath
 .project
-.prefs
+.settings
 # =========================
 # Operating System Files
 # =========================
