@@ -38,8 +38,8 @@ public class ZooKeeper_Create_API_ASync_Usage implements Watcher {
     public void process(WatchedEvent event) {
         if (KeeperState.SyncConnected == event.getState()) {
             connectedSemaphore.countDown();
-        }
     }
+}
 }
 class IStringCallback implements AsyncCallback.StringCallback{
   public void processResult(int rc, String path, Object ctx, String name) {
