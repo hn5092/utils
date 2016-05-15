@@ -21,11 +21,11 @@ public class M1 implements EventHandler<job1> {
 	private EventHandler eventHandler;
 	private final Lock writeLock;
 	private final Lock readLock;
-	static StateMachine<JobStateInternal, Event1, job1> stateMachine;
+	private static StateMachine<JobStateInternal, Event1, job1> stateMachine;
 	/**
 	 * 构建一个状态机的DAG   这个DAG中分别分开始状态 结束状态  job事件
 	 */
-	protected static final StateMachineFactory<M1, JobStateInternal, Event1, job1> STATE_MACHINE_FACTORY = new StateMachineFactory<M1, JobStateInternal, Event1, job1>(
+	private static final StateMachineFactory<M1, JobStateInternal, Event1, job1> STATE_MACHINE_FACTORY = new StateMachineFactory<M1, JobStateInternal, Event1, job1>(
 			JobStateInternal.NEW)
 			//忽略的事件  这个是源码中没引用  但是没删除的代码
 //			.addTransition(JobStateInternal.CREATE, JobStateInternal.NEW,
