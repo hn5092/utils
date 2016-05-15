@@ -1,5 +1,7 @@
 package java7;
 
+import org.junit.Test;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -9,34 +11,11 @@ import java.nio.channels.CompletionHandler;
 import java.nio.channels.FileChannel;
 import java.nio.channels.spi.SelectorProvider;
 import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.DirectoryStream;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.StandardOpenOption;
-import java.nio.file.StandardWatchEventKinds;
-import java.nio.file.WatchEvent;
-import java.nio.file.WatchKey;
-import java.nio.file.WatchService;
-import java.nio.file.attribute.BasicFileAttributes;
-import java.nio.file.attribute.FileAttribute;
-import java.nio.file.attribute.FileTime;
-import java.nio.file.attribute.PosixFilePermission;
-import java.nio.file.attribute.PosixFilePermissions;
+import java.nio.file.*;
+import java.nio.file.attribute.*;
 import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
-
-import org.codehaus.jackson.map.ser.impl.SimpleFilterProvider;
-import org.junit.Test;
-
-import com.google.inject.Provider;
-import com.sun.tools.doclets.formats.html.resources.standard;
 
 public class LPath {
 	String ParentPath = "E:\\360Downloads";
@@ -221,7 +200,7 @@ public class LPath {
 					StandardOpenOption.READ);
 			ByteBuffer buffer = ByteBuffer.allocate(1024);
 			int read = channel.read(buffer, channel.size() - 1000);
-
+			System.out.println(read);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

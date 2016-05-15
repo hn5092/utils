@@ -9,7 +9,7 @@ public class TaskEvent extends AbstractEvent<TaskEventType>{
 		super(type);
 		this.taskID = taskID;
 	}
-	public String getTaskID() {
+	String getTaskID() {
 		return taskID;
 	}
 	

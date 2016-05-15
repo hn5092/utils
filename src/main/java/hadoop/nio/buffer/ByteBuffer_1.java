@@ -11,15 +11,21 @@ public class ByteBuffer_1 {
    ByteBuffer buffer = ByteBuffer.wrap(new byte[100]);
    //填充 java.nio.HeapByteBuffer[pos=2 lim=100 cap=100]
    buffer.put(0,(byte)'w').put((byte)'e').put((byte)'a').put((byte)'1').put((byte)'a').put((byte)'a').put((byte)'a');
+   System.out.println(buffer.position());
    //翻转 java.nio.HeapByteBuffer[pos=0 lim=2 cap=100]
    buffer.flip();
+   System.out.println(buffer.position());
+   System.out.println(buffer.limit());
    buffer.mark();
    //判断是否存在 ture
    System.out.println(buffer.hasRemaining());
    //释放java.nio.HeapByteBuffer[pos=1 lim=2 cap=100]
-   buffer.get();
+   System.out.println((char)buffer.get());
+   System.out.println(buffer);
+   System.out.println(buffer.position());
    //压缩   此时postion的位置 就是你读取的位置. 前面的全部被舍去java.nio.HeapByteBuffer[pos=1 lim=6 cap=100]
-   buffer.compact();
+   System.out.println("进行移动"+buffer.compact());
+   System.out.println(buffer.position());
    //使用reset的时候 如果标记没有被定义的话会导致异常   java.nio.HeapByteBuffer[pos=5 lim=100 cap=100]
    buffer.position(3).mark().position(5);
    //java.nio.HeapByteBuffer[pos=3 lim=100 cap=100]

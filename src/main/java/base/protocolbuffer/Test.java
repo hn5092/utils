@@ -22,7 +22,6 @@ public class Test {
 				people.writeDelimitedTo(fos);
 				fos.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			System.out.println("Read Error!");
 		}
@@ -34,7 +33,6 @@ public class Test {
 //			People people2 = People.parseFrom(buf);
 //			System.out.println("person2:" + people2);
 //		} catch (Exception e) {
-//			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
 		
