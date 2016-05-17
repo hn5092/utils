@@ -1,4 +1,4 @@
-package base.enum_l;
+package java.base.enum_l;
 
 import static org.junit.Assert.*;
 
