@@ -14,6 +14,11 @@ public class ByteBuffer_1 {
    System.out.println(buffer.position());
    //翻转 java.nio.HeapByteBuffer[pos=0 lim=2 cap=100]
    buffer.flip();
+//   buffer.rewind();
+   System.out.println(buffer);
+   System.out.println(buffer.position());
+   char c = (char) buffer.get();
+   System.out.println(c);
    System.out.println(buffer.position());
    System.out.println(buffer.limit());
    buffer.mark();
