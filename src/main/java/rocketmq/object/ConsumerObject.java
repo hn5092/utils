@@ -15,8 +15,8 @@ import java.util.List;
 public class ConsumerObject {
 	public static void main(String[] args){
 		DefaultMQPushConsumer consumer = 
-				new DefaultMQPushConsumer("PushConsumer");
-		consumer.setNamesrvAddr("xym01:9876");
+				new DefaultMQPushConsumer("PushConsumer3");
+		consumer.setNamesrvAddr("172.27.101.67:9876");
 		try {
 			//订阅PushTopic下Tag为push的消息
 			consumer.subscribe("PushTopic", "push");
@@ -28,9 +28,10 @@ public class ConsumerObject {
 					public ConsumeConcurrentlyStatus consumeMessage(
 							List<MessageExt> list,
 							ConsumeConcurrentlyContext Context) {
-						Message msg = list.get(0);
+						MessageExt msg = list.get(0);
 						System.out.println(msg.toString());
 						try {
+							System.out.println(msg.getReconsumeTimes());
 							System.out.println(TestPeople.People.parseFrom(msg.getBody()).getName());
 						} catch (InvalidProtocolBufferException e) {
 							e.printStackTrace();

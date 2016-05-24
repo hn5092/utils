@@ -7,8 +7,8 @@ import com.alibaba.rocketmq.common.message.Message;
 
 public class ProducerObject {
 	public static void main(String[] args){
-		DefaultMQProducer producer = new DefaultMQProducer("Producer");
-		producer.setNamesrvAddr("192.168.80.101:9876");
+		DefaultMQProducer producer = new DefaultMQProducer("Producer2");
+		producer.setNamesrvAddr("172.27.101.67:9876");
 		try {
 			producer.start();
 			TestPeople.People.Builder peBuilder = TestPeople.People.newBuilder().
