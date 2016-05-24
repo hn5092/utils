@@ -11,7 +11,7 @@ public class Producer {
 		try {
 			producer.start();
 			
-			Message msg = new Message("PushTopic", 
+			Message msg = new Message("mysql",
 					"push", 
 					"1", 
 					"Just for test.".getBytes());

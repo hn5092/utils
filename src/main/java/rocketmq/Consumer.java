@@ -17,10 +17,10 @@ public class Consumer {
 		consumer.setNamesrvAddr("VM-G101-06-67:9876");
 		try {
 			//订阅PushTopic下Tag为push的消息
-			consumer.subscribe("PushTopic", "push");
+			consumer.subscribe("mysql", "push");
 			//程序第一次启动从消息队列头取数据
 			consumer.setConsumeFromWhere(
-					ConsumeFromWhere.CONSUME_FROM_FIRST_OFFSET);
+					ConsumeFromWhere.CONSUME_FROM_LAST_OFFSET);
 			consumer.registerMessageListener(
 				new MessageListenerConcurrently() {
 					public ConsumeConcurrentlyStatus consumeMessage(

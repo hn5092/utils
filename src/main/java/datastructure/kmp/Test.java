@@ -8,7 +8,7 @@ public class Test {
         
 		String src="abcabcdaacadb";
 		String sub="aabcabd";
-		
+		          //-101
 		int[] next = KMP.getNext(sub);
 		for(int i=0;i<next.length;i++)
 		{
