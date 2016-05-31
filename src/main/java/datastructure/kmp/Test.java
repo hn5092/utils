@@ -6,8 +6,8 @@ public class Test {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         
-		String src="abcabcdaacadb";
-		String sub="aabcabd";
+		String src="abcaabdaacadb";
+		String sub="ababcbce";
 		          //-101
 		int[] next = KMP.getNext(sub);
 		for(int i=0;i<next.length;i++)
